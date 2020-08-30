@@ -1,5 +1,4 @@
 const route = require('express').Router()
-const Show_Details = require('../db').Show_Details
 const Tickets_Sold = require('../db').Tickets_Sold
 
 route.get('/', (req, res) => {
@@ -9,7 +8,7 @@ route.get('/', (req, res) => {
         })
         .catch((err) => {
             res.status(500).send({
-                error: "Couldn't Retrieve Show Details"
+                error: "Couldn't Retrieve Ticket Details"
             })
         })
 })
