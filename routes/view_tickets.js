@@ -1,18 +1,7 @@
 const route = require('express').Router()
 const Tickets_Sold = require('../db').Tickets_Sold
 
-route.get('/', (req, res) => {
-    Tickets_Sold.findAll()
-        .then((tickets) => {
-            res.status(200).send(tickets)
-        })
-        .catch((err) => {
-            res.status(500).send({
-                error: "Couldn't Retrieve Ticket Details"
-            })
-        })
-})
-
+// View Tickets For A Given Date & Show Time
 route.post('/', (req, res) => {
     Tickets_Sold.findAll({
         where: {date: req.body.date, time: req.body.time}
