@@ -18,6 +18,8 @@ server.use('/delete_ticket', require('./routes/delete_ticket').route)
 server.use('/view_user', require('./routes/view_user').route)
 server.use('/view_tickets', require('./routes/view_tickets').route)
 server.use('/all_shows', require('./routes/all_shows').route)
+server.use('/all_tickets', require('./routes/all_tickets').route)
+server.use('/all_users', require('./routes/all_users').route)
 
 // Auto-Delete Old Tickets (8 Hours Old)
 schedule.scheduleJob('0 0 * * * *', () => {
