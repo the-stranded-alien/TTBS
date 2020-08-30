@@ -2,12 +2,12 @@
 *A REST Interface (API) For A Movie Theatre Booking System*
 
 #### Contents
- * [Requirements]()
- * [Steps to Set-Up]()
- * [Using The API]()
- * [Database Structure]()
+ * [Requirements](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#requirements)
+ * [Steps to Set-Up](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#steps-to-set-up-the-api-at-your-location-machine)
+ * [Using The API](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#using-the-api)
+ * [Database Structure](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#database-structure)
  * [Logic]()
- * [Test Cases For All Endpoints]()
+ * [Test Cases & Screenshots For All Endpoints]()
 
 ### Requirements
 This API is built using Node.js & it uses MySQL as the database. Requirements are as follows :
@@ -88,7 +88,7 @@ This API is built using Node.js & it uses MySQL as the database. Requirements ar
   * Route -> /all_users/
   * HTTP Method -> GET
   
-#### Database Structure
+### Database Structure
  * Table 1 : Show Details (name -> shows)
     * Column 1 : date -> Show Date (YYYY-MM-DD)
     * Column 2 : time -> Show Time (12 for 12:00, 15 for 15:00, 18 for 18:00, 21 for 21:00)
@@ -102,3 +102,7 @@ This API is built using Node.js & it uses MySQL as the database. Requirements ar
     * Column 2 : date -> Show Date On The Ticket
     * Column 3 : time -> Show Time On The Ticket
     * Column 4 : user_id -> user_id Of The User Who Booked This Ticket
+
+### Logic 
+
+### Test Cases & Screenshots For All Endpoints
