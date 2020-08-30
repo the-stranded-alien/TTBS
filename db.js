@@ -9,6 +9,10 @@ const db = new Sequelize('ttbs_db', 'ttbs', 'ttbs_password', {
     }
 })
 
+// Table 1 : Show Details (name -> shows)
+// Column 1 : date -> Show Date (YYYY-MM-DD)
+// Column 2 : time -> Show Time (12 for 12:00, 15 for 15:00, 18 for 18:00, 21 for 21:00)
+// Column 3 : ticket_count -> Tickets Sold For This Show
 const Show_Details = db.define('shows', {
     date: {
         type: Sequelize.DATEONLY,
@@ -24,6 +28,10 @@ const Show_Details = db.define('shows', {
     }
 })
 
+// Table 2 : Registered Users (name -> users)
+// Column 1 : user_id -> Unique User Id
+// Column 2 : name -> User's Name
+// Column 3 : phone -> User's Phone Number 
 const Registered_Users = db.define('users', {
     user_id: {
         type: Sequelize.INTEGER.UNSIGNED,
@@ -40,6 +48,11 @@ const Registered_Users = db.define('users', {
     }
 })
 
+// Table 3 : Tickets Sold (name -> tickets)
+// Column 1 : ticket_id -> Unique Ticket Id
+// Column 2 : date -> Show Date On The Ticket
+// Column 3 : time -> Show Time On The Ticket
+// Column 4 : user_id -> user_id Of The User Who Booked This Ticket
 const Tickets_Sold = db.define('tickets', {
     ticket_id: {
         type: Sequelize.INTEGER.UNSIGNED,
