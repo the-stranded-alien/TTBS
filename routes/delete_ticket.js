@@ -2,6 +2,10 @@ const route = require('express').Router()
 const Show_Details = require('../db').Show_Details
 const Tickets_Sold = require('../db').Tickets_Sold
 
+// Delete A Ticket (Given It's Ticket_Id)
+// If The Ticket_Id Exists Delete The Ticket 
+// From The Ticket_Sold & Reduce The Count Of
+// That Show's Ticket_Count in Show_Details.
 route.delete('/', (req, res) => {
     Tickets_Sold.findOne({ where: {ticket_id: req.body.ticket} })
     .then((ticket) => {
