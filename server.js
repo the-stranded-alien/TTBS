@@ -10,9 +10,10 @@ server.get('/', function(req, res, next) { res.send("Theater Booking System API"
 server.use('/new_user', require('./routes/new_user').route)
 server.use('/book_ticket', require('./routes/book_ticket').route)
 server.use('/update_ticket', require('./routes/update_ticket').route)
-// server.use('/delete_ticket', deleteTicketRoute)
-// server.use('/view_user', viewUserRoute)
-// server.use('/view_tickets', viewTicketsRoute)
+server.use('/delete_ticket', require('./routes/delete_ticket').route)
+server.use('/view_user', require('./routes/view_user').route)
+server.use('/view_tickets', require('./routes/view_tickets').route)
+server.use('/all_shows', require('./routes/all_shows').route)
 
 // Invalid API Request
 server.use((req, res) => res.send("404 Invalid API Call"))
