@@ -25,6 +25,7 @@ This API is built using Node.js & it uses MySQL as the database. Requirements ar
       * GRANT ALL PRIVILEGES ON ttbs_db.* TO ttbs;
       * FLUSH PRIVILEGES;
    * Exit Shell.
+   ![Database Set-Up Help]()
  2. Saving code & downloading required packages at your system.
    * Download this repository and save the entire code at any directory.
    * Open cmd at that directory and write following:
