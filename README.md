@@ -16,6 +16,7 @@ This API is built using Node.js & it uses MySQL as the database. Requirements ar
  * MySQL Server (Version: 8.0.21 or higher)
 
 ### Steps to Set-Up the API (At Your Location Machine)
+ 
  1. Setting up the MySQL database.
    * After logging into MySQL using shell, create database by writting: CREATE DATABASE ttbs_db;
    * Create a New User by writting: CREATE USER ttbs IDENTIFIED BY 'ttbs_password';
@@ -25,12 +26,15 @@ This API is built using Node.js & it uses MySQL as the database. Requirements ar
       * GRANT ALL PRIVILEGES ON ttbs_db.* TO ttbs;
       * FLUSH PRIVILEGES;
    * Exit Shell.
-   ![Database Set-Up Help]()
+   
+![Database Set-Up Help](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/SettingUpDatabase.png)
+
  2. Saving code & downloading required packages at your system.
    * Download this repository and save the entire code at any directory.
    * Open cmd at that directory and write following:
       * npm init .
       * npm install
+
  3. Running the Node application.
    * Open cmd in the same directory and write:
       * node server.js
