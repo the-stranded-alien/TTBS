@@ -19,8 +19,13 @@ route.post('/', (req, res) => {
     Registered_Users.findOrCreate({
         where: {name: req.body.name, phone: req.body.phone}
     })
-    .then((user) => {
-        res.status(201).send(user)
+    .then(([user, created]) => {
+        if(created === true){
+            res.status(201).send(user)
+        }
+        else {
+            res.status(401).send("User Already Exists")
+        }
     })
     .catch((err) => {
         res.status(501).send({
