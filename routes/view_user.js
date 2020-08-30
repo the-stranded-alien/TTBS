@@ -2,19 +2,7 @@ const route = require('express').Router()
 const Tickets_Sold = require('../db').Tickets_Sold
 const Registered_Users = require('../db').Registered_Users
 
-// Send Details Of All Booked Tickets (Only For Testing Purpose)
-route.get('/', (req, res) => {
-    Registered_Users.findAll()
-        .then((users) => {
-            res.status(200).send(users)
-        })
-        .catch((err) => {
-            res.status(500).send({
-                error: "Couldn't Retrieve User Details"
-            })
-        })
-})
-
+// View User Information Based On Ticket_Id
 route.post('/', (req, res) => {
     Tickets_Sold.findOne({ where: {ticket_id: req.body.ticket} })
     .then((ticket) => {
