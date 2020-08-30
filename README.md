@@ -1,6 +1,14 @@
 ## Theater Ticket Booking System API 
 *A REST Interface (API) For A Movie Theatre Booking System*
 
+#### Contents
+ * [Requirements]()
+ * [Steps to Set-Up]()
+ * [Using The API]()
+ * [Database Structure]()
+ * [Logic]()
+ * [Test Cases For All Endpoints]()
+
 ### Requirements
 This API is built using Node.js & it uses MySQL as the database. Requirements are as follows :
 * Node.js (Version: 12.16.3 or higher)
