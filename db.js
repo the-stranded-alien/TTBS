@@ -9,7 +9,7 @@ const db = new Sequelize('ttbs_db', 'ttbs', 'ttbs_password', {
     }
 })
 
-const Show_Details = db.define('show_details', {
+const Show_Details = db.define('shows', {
     date: {
         type: Sequelize.DATEONLY,
         primaryKey: true
@@ -24,7 +24,7 @@ const Show_Details = db.define('show_details', {
     }
 })
 
-const Registered_Users = db.define('registered_users', {
+const Registered_Users = db.define('users', {
     user_id: {
         type: Sequelize.INTEGER.UNSIGNED,
         primaryKey: true,
@@ -35,12 +35,12 @@ const Registered_Users = db.define('registered_users', {
         allowNull: false
     },
     phone: {
-        type: Sequelize.INTEGER.UNSIGNED,
+        type: Sequelize.BIGINT.UNSIGNED,
         allowNull: false
     }
 })
 
-const Tickets_Sold = db.define('tickets_sold', {
+const Tickets_Sold = db.define('tickets', {
     ticket_id: {
         type: Sequelize.INTEGER.UNSIGNED,
         primaryKey: true,
