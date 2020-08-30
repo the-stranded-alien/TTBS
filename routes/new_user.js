@@ -1,23 +1,34 @@
-// const express = require('express')
-// const Router = express.Router
-// const route = Router()
+const Registered_Users = require('../db').Registered_Users
 const route = require('express').Router()
 
-let users = [
-    {name: "Sahil", contact: "7249999056"},
-    {name: "Sahil1", contact: "72499990561"},
-    {name: "Sahil2", contact: "72499990562"},
-    {name: "Sahil3", contact: "72499990563"}
-]
-
-route.get('/', (req, res) => res.send(users))
-// route.get('/:id', (req, res) => res.send(users[req.params.id]))
-route.get('/add', (req, res) => {
-    users.push({
-        name: req.query.name,
-        contact: req.query.contact
-    })
-    res.send(users)
+// Send Details Of All Registered User (Only For Testing Purpose)
+route.get('/', (req, res) => {
+    Registered_Users.findAll()
+        .then((users) => {
+            res.status(200).send(users)
+        })
+        .catch((err) => {
+            res.status(500).send({
+                error: "Couldn't Retrieve Users."
+            })
+        })
 })
 
-module.exports = route
+// Adding A New User To Our Database, Only If It Doesn't Exists Already.
+route.post('/', (req, res) => {
+    Registered_Users.findOrCreate({
+        where: {name: req.body.name, phone: req.body.phone}
+    })
+    .then((user) => {
+        res.status(201).send(user)
+    })
+    .catch((err) => {
+        res.status(501).send({
+            error: "Couldn't Add A New User"
+        })
+    })
+})
+
+exports = module.exports = {
+    route
+}
