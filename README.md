@@ -8,6 +8,14 @@
  * [Database Structure](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#database-structure)
  * [Logic](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#logic)
  * [Test Cases & Screenshots For All Endpoints](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#test-cases--screenshots-for-all-endpoints)
+    * [Adding A New User](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#1-adding-new-user)
+    * [Book A Ticket : Endpoint-1](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#2-book-a-ticket-endpoint---1)
+    * [Update A Ticket : Endpoint-2](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#3-update-a-ticket-endpoint---2)
+    * [View All Tickets For A Particular Time : Endpoint-3](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#4-view-all-tickets-for-a-particular-time-endpoint---3)
+    * [Delete A Particular Ticket : Endpoint-4](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#5-delete-a-particular-ticket-endpoint---4)
+    * [View User Based On Ticket Id : Endpoint-5](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#6-view-users-detail-based-on-ticket-id-endpoint---5)
+    * [Max 20 Tickets For A Particular Show Date & Time : Note](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#7-maximum-20-tickets-can-be-booked-for-a-particular-time-note)
+    * [Automatically Delete Expired Tickets : Plus Point](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#8-automatically-delete-expired-8-hours-old-tickets)
 
 ### Requirements
 This API is built using Node.js & it uses MySQL as the database. Requirements are as follows :
