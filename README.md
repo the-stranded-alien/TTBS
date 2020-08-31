@@ -125,55 +125,75 @@ This API is built using Node.js & it uses MySQL as the database. Requirements ar
    2. If current hour (HH) is 8 Hours ahead of our 4 show times (12:00, 15:00, 18:00, 21:00) i.e. it have values (20:00, 23:00, 02:00, 05:00), delete enteries from database keeping in mind the current date.
 
 ### Test Cases & Screenshots For All Endpoints
-1. Adding New User
+**Few Test Cases Covering Various Methods & Situations Are Shown Below With Help Of Screenshots. Covering All Possible Test Cases Would Have Created A Mess, So Picked A Few From Each Type. All Other Test Cases Have Been Kept In Mind And All Code Is Done Keeping In Mind All Possible Scenarios.**
+#### 1. Adding New User
 
+* Added new user with name 'Sahil' & phone number 7249999056.
 ![Adding First User](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Adding_New_User.png)
 
+* Added two more new users.
 ![Adding Two More Users](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/After_Adding_2_More_Users.png)
 
-2. Book a Ticket (Endpoint - 1)
+#### 2. Book a Ticket (Endpoint - 1)
 
+* Booking The First Ticket
 ![Booking First Ticket](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Booking_First_Ticket.png)
 
+* Booking Few More Tickets
 ![Booking Few More Tickets](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Booking_Few_More.png)
 
+* Booking Ticket With A Date From Past (Error Message Shown)
 ![Invalid Booking - Wrong Date](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Invalid_Booking_Past.png)
 
+* Booking Ticket With A Wrong Show Time (Error Message Shown)
 ![Invalid Booking - Wrong Time](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Invalid_Booking_WrongTime.png)
 
+* Booking Ticket With Unregistered User (Error Message Shown)
 ![Invalid Booking - Unregistered User](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Invalid_Booking_Reg.png)
 
-3. Update a Ticket (Endpoint - 2)
+#### 3. Update a Ticket (Endpoint - 2)
 
+* Updating A Ticket (Query Made & Output Screen Before Refreshing) [**Time & Date For Ticket With Id 2 Changed**]
 ![Update Before Refresh](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Update_Before_Refresh.png)
 
+* Updating A Ticket (Query Made & Output Screen After Refreshing) [**Time & Date For Ticket With Id 2 Changed**]
 ![Update After Refresh](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Update_After_Refresh.png)
 
+* Updating A Ticket (Query Made & Output Screen After Refreshing) [**Time & Date For Ticket With Id 3 Changed**]
 ![Another Update](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Another_Update.png)
 
-4. View All Tickets For a Particular Time (Endpoint - 3)
+#### 4. View All Tickets For a Particular Time (Endpoint - 3)
 
+* Out Of All Tickets (Shown On Left - Browser) Only Ticket With Given Date & Time In Request Is Visible In Postman Body.
 ![View Tickets](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/View_Tickets.png)
 
-5. Delete a Particular Ticket (Endpoint - 4)
+#### 5. Delete a Particular Ticket (Endpoint - 4)
 
+* Deleting Ticket With Id 2 (Left Window Before Refreshing)
 ![Delete Before Refresh](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Delete_Before_Refresh.png)
 
+* Deleting Ticket With Id 2 (Left Window After Refreshing)
 ![Delete After Refresh](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Delete_After_Refresh.png)
 
-6. View User's Detail Based On Ticket Id (Endpoint - 5)
+#### 6. View User's Detail Based On Ticket Id (Endpoint - 5)
 
+* Viewing User Information For Ticket Id 3 (Shown In Postman Body)
 ![View User](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/View_User.png)
 
-7. Maximum 20 Tickets Can Be Booked For a Particular Time (Note)
+#### 7. Maximum 20 Tickets Can Be Booked For a Particular Time (Note)
 
+* 20 Tickets Already Existed For Show At 15:00 On 2020-08-31
 ![Max Before](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Max_20_Before.png)
 
+* So Making Another Booking For That Slot, Gave A Error Visible In Postman Window
 ![Max After](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Max_20_After.png)
 
-8. Automatically Delete Expired (8 Hours Old) Tickets
+#### 8. Automatically Delete Expired (8 Hours Old) Tickets
 
+*Although We Are Deleting Automatically At Exactly Time Difference Of 08:00:00 But For The Purpose Of Taking Screenshots We Have Changed Auto-Delete Time Difference To 08:40:00 For A While.*
+
+* At 05:39, Ticket Ids 23, 24, 25 Exists In All Tickets Table. Show Date : 2020-08-30 & Time : 21:00.
 ![Auto-Delete Before](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Auto_Delete_Before.png)
 
+* According To Time Difference Of 08:40:00 (Only Taken To Ease Up Screenshoting Time) Tickets Of 21:00 on 30th Aug Should Be Deleted At 31st Aug 05:40. And At Exact 05:40, Ticket With Ids 23, 24, 25 Got Deleted Automatically. (Focus On Bottom-Right For Clock)
 ![Auto-Delete After](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Auto_Delete_After.png)
-
