@@ -125,3 +125,55 @@ This API is built using Node.js & it uses MySQL as the database. Requirements ar
    2. If current hour (HH) is 8 Hours ahead of our 4 show times (12:00, 15:00, 18:00, 21:00) i.e. it have values (20:00, 23:00, 02:00, 05:00), delete enteries from database keeping in mind the current date.
 
 ### Test Cases & Screenshots For All Endpoints
+1. Adding New User
+
+![Adding First User](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Adding_New_User.png)
+
+![Adding Two More Users](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/After_Adding_2_More_Users.png)
+
+2. Book a Ticket (Endpoint - 1)
+
+![Booking First Ticket](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Booking_First_Ticket.png)
+
+![Booking Few More Tickets](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Booking_Few_More.png)
+
+![Invalid Booking - Wrong Date](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Invalid_Booking_Past.png)
+
+![Invalid Booking - Wrong Time](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Invalid_Booking_WrongTime.png)
+
+![Invalid Booking - Unregistered User](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Invalid_Booking_Reg.png)
+
+3. Update a Ticket (Endpoint - 2)
+
+![Update Before Refresh](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Update_Before_Refresh.png)
+
+![Update After Refresh](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Update_After_Refresh.png)
+
+![Another Update](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Another_Update.png)
+
+4. View All Tickets For a Particular Time (Endpoint - 3)
+
+![View Tickets](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/View_Tickets.png)
+
+5. Delete a Particular Ticket (Endpoint - 4)
+
+![Delete Before Refresh](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Delete_Before_Refresh.png)
+
+![Delete After Refresh](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Delete_After_Refresh.png)
+
+6. View User's Detail Based On Ticket Id (Endpoint - 5)
+
+![View User](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/View_User.png)
+
+7. Maximum 20 Tickets Can Be Booked For a Particular Time (Note)
+
+![Max Before](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Max_20_Before.png)
+
+![Max After](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Max_20_After.png)
+
+8. Automatically Delete Expired (8 Hours Old) Tickets
+
+![Auto-Delete Before](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Auto_Delete_Before.png)
+
+![Auto-Delete After](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Auto_Delete_After.png)
+
